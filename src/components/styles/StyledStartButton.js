@@ -14,5 +14,4 @@ export const StyledStartButton = styled.button`
   outline: none;
   padding: 20px;
   width: 100%;
-
 `
