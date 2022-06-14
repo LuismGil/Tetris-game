@@ -1,4 +1,14 @@
-# Tetris Game
+<h1 align="center">Tetris Game</h1>
+
+<p
+  align="center"
+>
+  <img
+    src="src/img/tetrisGame.png"
+    height="auto";
+    width="450px";
+  />
+</p>
 
 This project was developed for educational purposes, in order to largely implement the functionality of React.
 
