@@ -14,6 +14,7 @@ import { useGameStatus } from '../hooks/useGameStatus';
 import Stage from './Stage';
 import Display from './Display';
 import StartButton from './StartButton';
+import KeyButtons from './KeyButtons';
 
 const Tetris = () => {
   const [dropTime, setDropTime] = useState(null);
@@ -29,6 +30,11 @@ const Tetris = () => {
     if (!checkCollision(player, stage, { x: dir, y: 0 })) {
       updatePlayerPos({ x: dir, y: 0 });
     }
+  }
+
+  const moveClick = (e) => {
+    console.log(e.target)
+    // if (e.target === )
   }
 
   const startGame = () => {
@@ -77,6 +83,7 @@ const Tetris = () => {
   }
 
   const move = ({ keyCode }) => {
+    console.log('keyCode', keyCode)
     if (!gameOver) {
       if (keyCode === 37) {
         movePlayer(-1);
@@ -111,6 +118,7 @@ const Tetris = () => {
           <StartButton callback={startGame} />
         </aside>
       </StyledTetris>
+      <KeyButtons keyClick={moveClick} />
     </StyledTetrisWrapper>
   )
 };
