@@ -9,19 +9,18 @@ export const StyledKeyButtons = styled.button`
   cursor: pointer;
   display: flex;
   font-family: Pixel, Arial, Helvetica, sans-serif;
-  font-size: 1rem;
   margin: -5px auto;
   min-height: 30px;
   outline: none;
-  padding: 20px;
-  width: 60px;
+  padding: 15px;
+  width: 50px;
 
   @media(min-width: 768px) {
     display: none;
   }
 
   .arrow {
-    border: 12px solid;
+    border: 10px solid;
     border-color: 
       darkcyan
       darkcyan
@@ -41,7 +40,7 @@ export const StyledKeyButtons = styled.button`
       translate(2px, 1px);
     top: 0;
     right: 0;
-    width: 16px;
+    width: 15px;
   }
 
   .arrow-right {

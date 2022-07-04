@@ -9,8 +9,8 @@ export const StyledDisplay = styled.div`
   color: ${props => (props.gameOver ? 'red' : '#999')};
   display: flex;
   font-family: Pixel, Arial, Helvetica, sans-serif;
-  font-size: 0.7rem;
-  margin: 0 auto 10px;
+  font-size: 0.6rem;
+  margin: 0 auto 5px;
   min-height: 30px;
   padding: 15px;
   width: 80%;
