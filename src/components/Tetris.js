@@ -33,8 +33,18 @@ const Tetris = () => {
   }
 
   const moveClick = (e) => {
-    console.log(e.target)
-    // if (e.target === )
+    if (!gameOver) {
+      if (e.target.className === 'arrow arrow-up') {
+        playerRotate(stage, 1);
+      } else if (e.target.className === 'arrow arrow-down') {
+        setDropTime(1000 / (level + 1) + 200);
+        dropPlayer();
+      } else if (e.target.className === 'arrow arrow-left') {
+        movePlayer(-1);
+      } else if (e.target.className === 'arrow arrow-right') {
+        movePlayer(1);
+      }
+    }
   }
 
   const startGame = () => {
@@ -61,7 +71,6 @@ const Tetris = () => {
     } else {
       // Game Over
       if (player.pos.y < 1) {
-        console.log('GAME OVER!!!');
         setGameOver(true);
         setDropTime(null);
       }
@@ -83,7 +92,6 @@ const Tetris = () => {
   }
 
   const move = ({ keyCode }) => {
-    console.log('keyCode', keyCode)
     if (!gameOver) {
       if (keyCode === 37) {
         movePlayer(-1);
@@ -118,7 +126,7 @@ const Tetris = () => {
           <StartButton callback={startGame} />
         </aside>
       </StyledTetris>
-      <KeyButtons keyClick={moveClick} />
+      <KeyButtons keyClick={e => moveClick(e)} />
     </StyledTetrisWrapper>
   )
 };
