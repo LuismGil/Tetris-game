@@ -37,8 +37,8 @@ const Tetris = () => {
       if (e.target.className === 'arrow arrow-up') {
         playerRotate(stage, 1);
       } else if (e.target.className === 'arrow arrow-down') {
-        setDropTime(1000 / (level + 1) + 200);
         dropPlayer();
+        setDropTime(1000 / (level + 1) + 200);
       } else if (e.target.className === 'arrow arrow-left') {
         movePlayer(-1);
       } else if (e.target.className === 'arrow arrow-right') {

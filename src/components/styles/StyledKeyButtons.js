@@ -5,12 +5,12 @@ export const StyledKeyButtons = styled.button`
   border: none;
   border-radius: 20px;
   box-sizing: border-box;
-  cursor: pointer;
   color: #fff;
+  cursor: pointer;
   display: flex;
   font-family: Pixel, Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  margin: -8px auto;
+  margin: -5px auto;
   min-height: 30px;
   outline: none;
   padding: 20px;
